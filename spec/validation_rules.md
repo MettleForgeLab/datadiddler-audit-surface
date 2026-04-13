@@ -79,24 +79,4 @@ FAIL:
 
 ```
 
----
 
-## 🧭 Quick note (why that happened)
-
-Those `\` were:
-
-👉 escape characters  
-👉 telling markdown “don’t interpret this”
-
-Which is why headers rendered as plain text.
-
----
-
-## Two lines, held steady
-
-Clean markdown renders structure.  
-Escaped markdown hides it.
-
----
-
-```
