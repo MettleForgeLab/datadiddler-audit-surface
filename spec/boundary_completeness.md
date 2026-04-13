@@ -1,9 +1,9 @@
-You're not getting it. Okay, let's go back to the original thing. Take this right here I'm about to give you and simply remove the backslashes. Give it back to me in pure, raw Markdown. No other changes, don't say anything else. Don't tell me why I went wrong. Just print the one thing. That's it. Period.
-\# Boundary Completeness Specification
+
+# Boundary Completeness Specification
 
 
 
-\## Definition
+## Definition
 
 
 
@@ -19,11 +19,11 @@ boundary\_complete := ∀ v, (influences\_output(v) → declared(v) ∧ observab
 
 
 
-\---
+---
 
 
 
-\## Boundary Components
+## Boundary Components
 
 
 
@@ -31,95 +31,95 @@ A valid boundary MUST include:
 
 
 
-\### 1. Input Data
+### 1. Input Data
 
-\- file paths explicitly listed  
+- file paths explicitly listed  
 
-\- file hashes recorded  
+- file hashes recorded  
 
-\- encoding declared  
-
-
-
-\### 2. Configuration State
-
-\- full config snapshot  
-
-\- no implicit defaults  
-
-\- versioned or hashed  
+- encoding declared  
 
 
 
-\### 3. Tool Code
+### 2. Configuration State
 
-\- exact version or commit hash  
+- full config snapshot  
 
-\- immutable reference  
+- no implicit defaults  
 
-
-
-\### 4. Tool Mapping
-
-\- tools.json explicitly declared  
-
-\- stage → tool mapping fixed  
+- versioned or hashed  
 
 
 
-\### 5. Execution Order
+### 3. Tool Code
 
-\- explicit stage order  
+- exact version or commit hash  
 
-\- no runtime reordering  
-
-
-
-\### 6. Runtime Environment
-
-\- language version  
-
-\- OS/platform  
-
-\- dependency versions  
+- immutable reference  
 
 
 
-\### 7. Filesystem Behavior
+### 4. Tool Mapping
 
-\- path resolution rules  
+- tools.json explicitly declared  
 
-\- ordering behavior controlled  
-
-
-
-\### 8. Canonicalization Rules
-
-\- sorting rules  
-
-\- serialization format  
-
-\- encoding  
-
-\- float precision  
+- stage → tool mapping fixed  
 
 
 
-\### 9. Observability
+### 5. Execution Order
 
-\- run record exists  
+- explicit stage order  
 
-\- artifacts addressable  
-
-\- hashes retrievable  
+- no runtime reordering  
 
 
 
-\---
+### 6. Runtime Environment
+
+- language version  
+
+- OS/platform  
+
+- dependency versions  
 
 
 
-\## Completeness Test
+### 7. Filesystem Behavior
+
+- path resolution rules  
+
+- ordering behavior controlled  
+
+
+
+### 8. Canonicalization Rules
+
+- sorting rules  
+
+- serialization format  
+
+- encoding  
+
+- float precision  
+
+
+
+### 9. Observability
+
+- run record exists  
+
+- artifacts addressable  
+
+- hashes retrievable  
+
+
+
+---
+
+
+
+## Completeness Test
 
 
 
@@ -133,11 +133,11 @@ boundary(R₁) == boundary(R₂)
 
 
 
-\---
+---
 
 
 
-\## Incompleteness Detection
+## Incompleteness Detection
 
 
 
@@ -153,11 +153,11 @@ AND boundary(R₁) == boundary(R₂)
 
 
 
-\---
+---
 
 
 
-\## Summary
+## Summary
 
 
 
