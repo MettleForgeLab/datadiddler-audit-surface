@@ -1,8 +1,10 @@
-\# DataDiddler Audit Surface
+
+
+# DataDiddler Audit Surface
 
 
 
-\## Overview
+## Overview
 
 
 
@@ -18,19 +20,19 @@ It verifies that:
 
 
 
-\- all influences on output are explicitly declared
+- all influences on output are explicitly declared
 
-\- outputs are reproducible under identical conditions
+- outputs are reproducible under identical conditions
 
-\- any divergence is attributable to a missing boundary declaration
-
-
-
-\---
+- any divergence is attributable to a missing boundary declaration
 
 
 
-\## Purpose
+---
+
+
+
+## Purpose
 
 
 
@@ -52,15 +54,15 @@ Operationally, this means:
 
 \- If two runs produce different outputs → the boundary definition is incomplete  
 
-\- If two runs produce identical outputs under identical boundaries → the run is reproducible and boundary-complete  
+- If two runs produce identical outputs under identical boundaries → the run is reproducible and boundary-complete  
 
 
 
-\---
+---
 
 
 
-\## What It Verifies
+## What It Verifies
 
 
 
@@ -68,7 +70,7 @@ The audit surface verifies:
 
 
 
-\### 1. Boundary Completeness
+### 1. Boundary Completeness
 
 
 
@@ -76,23 +78,23 @@ All variables that can influence artifact bytes are declared, including:
 
 
 
-\- input data  
+- input data  
 
-\- configuration state  
+- configuration state  
 
-\- tool code and mapping  
+- tool code and mapping  
 
-\- execution order  
+- execution order  
 
-\- runtime environment  
+- runtime environment  
 
-\- filesystem behavior  
+- filesystem behavior  
 
-\- canonicalization rules  
+- canonicalization rules  
 
 
 
-\### 2. Reproducibility
+### 2. Reproducibility
 
 
 
@@ -111,16 +113,15 @@ same boundary → same artifacts
 Validation is performed via:
 
 
+- artifact hashing  
 
-\- artifact hashing  
+- run record comparison  
 
-\- run record comparison  
-
-\- deterministic execution checks  
-
+- deterministic execution checks  
 
 
-\### 3. Observability
+
+### 3. Observability
 
 
 
@@ -128,15 +129,15 @@ All declared boundary elements must be:
 
 
 
-\- explicitly recorded  
+- explicitly recorded  
 
-\- inspectable  
+- inspectable  
 
-\- reproducible  
+- reproducible  
 
 
 
-\---
+---
 
 
 
@@ -148,15 +149,15 @@ The audit surface does not:
 
 
 
-\- evaluate semantic correctness  
+- evaluate semantic correctness  
 
-\- enforce relational coherence  
+- enforce relational coherence  
 
-\- interpret outputs  
+- interpret outputs  
 
-\- modify artifacts  
+- modify artifacts  
 
-\- influence pipeline execution  
+- influence pipeline execution  
 
 
 
@@ -176,27 +177,26 @@ CONSUMER → interprets meaning
 
 
 
-\---
+---
 
 
 
-\## Relationship to DataDiddler Runtime
+## Relationship to DataDiddler Runtime
 
 
 
 The audit surface operates alongside the DataDiddler runtime.
 
 
-
-\### Runtime Responsibilities
-
+### Runtime Responsibilities
 
 
-\- execute pipeline stages  
 
-\- produce artifacts  
+- execute pipeline stages  
 
-\- enforce structural contracts  
+- produce artifacts  
+
+- enforce structural contracts  
 
 
 
@@ -204,19 +204,19 @@ The audit surface operates alongside the DataDiddler runtime.
 
 
 
-\- verify boundary declaration  
+- verify boundary declaration  
 
-\- validate reproducibility  
+- validate reproducibility  
 
-\- detect hidden variables via divergence  
-
-
-
-\---
+- detect hidden variables via divergence  
 
 
 
-\## Core Model
+---
+
+
+
+## Core Model
 
 
 
@@ -232,7 +232,7 @@ boundary\_complete := no hidden variables
 
 
 
-\---
+---
 
 
 
@@ -256,7 +256,7 @@ All failures are classified as boundary failures:
 
 
 
-\---
+---
 
 
 
@@ -268,21 +268,21 @@ The audit surface is designed to be:
 
 
 
-\- used by engineers to validate pipeline runs  
+- used by engineers to validate pipeline runs  
 
-\- integrated into CI/CD workflows  
+- integrated into CI/CD workflows  
 
-\- applied across environments  
+- applied across environments  
 
-\- consumed as a verification layer  
-
-
-
-\---
+- consumed as a verification layer  
 
 
 
-\## Summary
+---
+
+
+
+## Summary
 
 
 
