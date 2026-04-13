@@ -55,3 +55,5 @@ Summary
 A boundary is complete when:
 
 no unobserved variable can affect artifact bytes
+
+no unobserved variable can affect artifact bytes
