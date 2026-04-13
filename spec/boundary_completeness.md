@@ -1,11 +1,9 @@
-# Boundary Completeness Specification
+Boundary Completeness Specification
+Definition
 
-## Definition
+A boundary is considered complete when all variables capable of influencing canonical artifact bytes are explicitly declared and observable.
 
-A boundary is considered **complete** when all variables capable of influencing canonical artifact bytes are explicitly declared and observable.
-
-```text
-boundary_complete := ∀ v, (influences_output(v) → declared(v) ∧ observable(v))
+boundary_complete := ∀ v, (influences_output(v) → declared(v) ∧ observable(v)
 Boundary Components
 
 A valid boundary MUST include:
