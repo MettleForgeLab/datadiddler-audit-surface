@@ -1,8 +1,4 @@
 
-
----
-
-````markdown
 # Validation Rules
 
 ## Overview
