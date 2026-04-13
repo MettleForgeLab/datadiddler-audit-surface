@@ -1,6 +1,4 @@
-Ahh yeah—this happens when something escapes markdown (usually from copying out of a renderer or tool that adds escape characters).
 
-Here’s your **clean drop-in version** with no backslashes:
 
 ---
 
@@ -105,5 +103,4 @@ Escaped markdown hides it.
 
 ---
 
-If you want, I can sweep the rest of your audit files and normalize them all in one go.
 ```
